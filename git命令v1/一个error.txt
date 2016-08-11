@@ -1,0 +1,4 @@
+error: src refspec master does not match any.
+error: failed to push some refs to 'origin'
+
+可能是因为自己当前所在的目录就错了
