@@ -1,3 +1,0 @@
-哈希表和HashMap内部实现原理：
-http://blog.csdn.net/vking_wang/article/details/14166593
-
