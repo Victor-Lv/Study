@@ -1,5 +1,0 @@
-如果有多个branch，
-然后每个branch的修改不同，比如你当前只是在newBranch增加了一个h.txt文件
-那么重新切换回master branch时，你会发现本地文件夹里你的这个文件不见了。
-方法一是：将同样的修改反映到各个branch去，也就是给master分支也添加h.txt文件
-方法二是：将newBranch分支合并到master分支

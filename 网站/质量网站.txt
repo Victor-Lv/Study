@@ -1,9 +1,0 @@
-github
-CSDN
-cnblogs
-stack overflow
-V2EX
-ITeye
-并发编程网
-开源中国
-IBM developerworks
