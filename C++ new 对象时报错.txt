@@ -1,0 +1,8 @@
+报错信息：
+conversion from 'LinkedList<myInt>*' to non-scalar type 'LinkedList<myInt>' requested
+
+是因为C++ new对象的写法跟java不一样：
+LinkedList<int> *test = new LinkedList<int>();
+
+C++中只是声明对象而未new时，写法跟java一样：
+LinkedList<int> test
