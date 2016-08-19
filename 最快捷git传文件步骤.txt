@@ -1,0 +1,15 @@
+配置user.name这些是为了让github项目主人看到你是谁，所以如果只是个人使用，不配置也ok。
+
+1.克隆项目到本地：
+git clone http://github.com/Study.git
+
+2.
+git add .
+
+3.
+git commit -m "update"
+
+4.
+git push -u origin master
+
+5.弹出窗口填写用户名和密码
