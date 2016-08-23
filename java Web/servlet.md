@@ -72,7 +72,7 @@ public void destroy()
 如果选中的是工程文件再run的话，网页打开的只是到工程或servlet路径下(http://localhost:8080/Hello/)，
 并没有打开到.java或者说.class。所以需要自行在网页窗口url后面添加/Hello(http://localhost:8080/Hello/Hello)
 
-9.如果修改了.java文件，保存java文件时就会自动更新编译，我们只需要刷新下刚才那个网页窗口就能看到修改后的效果。
+9.如果修改了.java文件，保存java文件时就会自动更新编译，我们只需要刷新下刚才那个网页窗口(可能刷新/编译得很慢，需要自己多摁几遍刷新键）就能看到修改后的效果。
 例如把java文件里面的message字符串改为：
 "Hello haha"
 然后刷新下网页窗口，就能看到输出的是一行：Hello haha
