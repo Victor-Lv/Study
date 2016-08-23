@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+    <servlet>
+        <servlet-name>Hello</servlet-name>    <!-- 名字随便,注意到时候浏览器打开这里是一个中间目录（url路径） -->
+        <servlet-class>com.Hello</servlet-class>    <!-- servlet类名-->
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Hello</servlet-name>
+        <url-pattern>/Hello</url-pattern>    <!-- url访问虚拟路径，最后我们就是通过工程名/login进行访问的，像这样http://127.0.0.1:8000/LoginAction/login-->
+    </servlet-mapping>
+
+</web-app>
