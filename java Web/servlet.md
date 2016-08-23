@@ -53,6 +53,7 @@ public void destroy()
 
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
+<!-- 其实上面这两行不要一样可以正常运行-->
 
 <web-app>
     <servlet>
