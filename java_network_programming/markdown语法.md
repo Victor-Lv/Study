@@ -15,6 +15,9 @@
 
     摁一次tab键或者ctrl+K快捷键插入代码
 
+插入图片(只能插入网络上的图片，即url。所以可以先把图片上传到云端上或者github上，然后插入图片只需要写入url即可，markdPad软件有很方便的按键完成插入图片的操作)：
+###插入图片语法："!" + "[ ]" + "(" + url + ")"  ：###
+![](https://github.com/Victor-Lv/Study/blob/master/java_network_programming/status-1.PNG)
 
 ## markdown语法快捷键： ###
 
