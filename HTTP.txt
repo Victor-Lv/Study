@@ -1,0 +1,13 @@
+一个HTTP-GET报文示例：
+
+GET /index.html HTTP/1.0
+Accept: text/html, text/plain, image/gif, image/jpeg
+User-Agent: Lynx/2.4 libwww/2.1.4
+Host: www.cafeaulait.org
+
+我：client客户端
+第一句表示我要GET 这个位置上的资源
+第二句表示我能接受html、plain、gif、jpeg四种资源并正确解析（"which tells the server what kinds of
+data the client can handle (though servers often ignore this)"）
+第三句告诉服务器说我现在使用的浏览器类型（"User-Agent is another common keyword that lets the server know what browser is being used, allowing the server to send files optimized for the particular browser type. The line below says that the request comes from Version 2.4 of theLynx browser:"）
+第四句说明我请求的服务器的域名[因为同个IP下可有多个host域名--一台服务器挂载多个网站]（" include a Host field specifying the server’s name, which allows web servers to distinguish between different named hosts served from the same IP address. "）
