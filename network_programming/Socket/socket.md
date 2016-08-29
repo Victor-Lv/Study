@@ -42,7 +42,7 @@ agreed-upon hand-shaking followed by the transmission of data from one to the ot
 3. 一旦连接被建立，本地和远程主机通过输入输出流进行数据的发送和接收。并且这个连接时全双工的--任意一方都可以同时进行发送和接收
 4. 数据传输完成后，某一方或者双方关闭该socket连接  
 
-![](https://github.com/Victor-Lv/Network_Programming/blob/master/image/socket_communication_root.PNG)
+![](https://github.com/Victor-Lv/Study/blob/master/network_programming/image/socket_communication_root.PNG)
 
 另外：附几个讲解Socket的博客链接：  
 http://www.cnblogs.com/dolphinX/p/3460545.html  
