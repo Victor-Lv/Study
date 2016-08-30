@@ -15,6 +15,10 @@
 
     摁一次tab键或者ctrl+K快捷键或者用 'this is code' 插入代码
 
+####插入代码：ctrl+K或tab缩进   
+但如果markdown插入整段代码时发现只有第一行被当做是代码怎么破：    
+选定其他的代码，继续摁一下ctrl+k插入代码键就ok了。
+
 插入图片(只能插入网络上的图片，即url。所以可以先把图片上传到云端上或者github上，然后插入图片只需要写入url即可，markdPad软件有很方便的按键完成插入图片的操作)：
 ###插入图片语法："!" + "[ ]" + "(" + url + ")"  ：###
 ![](https://github.com/Victor-Lv/Network_Programming/blob/master/image/MIME-1.PNG)
