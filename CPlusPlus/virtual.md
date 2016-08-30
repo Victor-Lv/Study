@@ -108,3 +108,5 @@
 
 另外，在C++中还有虚继承和虚拟基类这种东西，网上例如百度百科就有浅显易懂的解释，这里只用一张图解释就足以说明很多东西：  
 ![](https://github.com/Victor-Lv/Study/blob/master/CPlusPlus/image/virtual_inherit.jpg)
+
+第一张图就是所谓的“菱形继承”。
