@@ -1,4 +1,8 @@
 ##servlet菜鸟第一步（环境：eclipse + tomcat）
+
+一张servlet架构图简单介绍了servlet所处的位置：  
+![](https://github.com/Victor-Lv/Study/blob/master/Study/java Web/image/servlet_framework.png)
+
 这篇我们来跑我们的第一个servlet程序。  
 首先，安装必备的环境：  
 1.安装jdk+环境变量配置  
