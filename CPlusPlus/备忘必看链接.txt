@@ -4,5 +4,7 @@ http://blog.csdn.net/luckyxiaoqiang/article/details/7393134#topic7
 刷题：
 https://leetcode.com/
 
-博客：
+两位csdn博客大牛：
 http://blog.csdn.net/v_july_v/article/details/6543438
+http://blog.csdn.net/luckyxiaoqiang/article/details/13000431
+
