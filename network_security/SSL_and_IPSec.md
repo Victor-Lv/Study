@@ -3,3 +3,7 @@ SSL(Secure Socket Layer)协议位于TCP/IP协议与各种应用层协议之间�
 SSL架构图：  
 ![SSL架构图](https://github.com/Victor-Lv/Study/blob/master/network_security/image/SSL_framework.jpg)  
 
+IPSec处于IP层和TCP层之间，提供的是对IP包的保护（加解密、身份验证和隐藏、签名验证等）  
+
+我的博客：  
+[浅谈SSL于IPSec等各层安全](http://blog.csdn.net/lv_victor/article/details/51636576)
