@@ -44,7 +44,52 @@ void quick_sort(int *array, int left, int right)
 	
 }
 
-
+void merge(int *array,const int left,const int right)
+{
+	int mid = (left + right) / 2;
+	int *temp= new int[right - left + 1]; //新开个暂存数组存储有序序列 
+	int i = left, j = mid + 1, k = 0;
+	while(i <= mid && j <= right)
+	{
+		if(array[i] <= array[j])
+			temp[k++] = array[i++];
+		else
+			temp[k++] = array[j++];
+	}
+	while(i <= mid) //左半边仍未完全抽取 
+		temp[k++] = array[i++];
+	while(j <= right) //右半边仍未完全抽取 
+		temp[k++] = array[j++];
+	//将temp映射回array
+	int length = right - left + 1;
+	for(k = 0, i = left; i <= right;) 
+		array[i++] = temp[k++];
+	delete temp;
+	temp = NULL; //拒绝野指针
+	/**
+	* delete操作只是回收了temp原来指向的那部分空间，但是对于temp这个指针变量，
+	* 在其离开作用域之前仍然是可用的，只是它究竟指向哪部分区域，这个依系统而定，
+	* 这时它就变成了所谓的"野指针",有时候它是危险的因为可能指向一片不该指向的内存，
+	* 所以良好的代码习惯是delete与赋NULL同时存在，使该指针指向无效的NULL。 
+	*/ 
+}
+	
+/**归并排序： 
+ * 两大关键步骤 ：
+ * 1. 切分 -->  将序列不断对半切分，直至每组为单个元素 -->递归放网 
+ * 2. 归并 -->  将每组归并成有序的大组，往上逐渐归并   -->递归收网 
+ */
+void merge_sort(int *array, int left, int right)
+{
+	if(left >= right)
+		return;
+	int mid = (left + right) / 2;
+	//1:切分 
+	merge_sort(array, left, mid);
+	merge_sort(array, mid+1, right);
+	//2:归并 
+	merge(array, left, right);
+}
 
 int main()
 {
@@ -54,7 +99,8 @@ int main()
 		cout<<array[i]<<" ";
 	cout<<array[5]<<endl;
 	//buble_sort(array,6);
-	quick_sort(array,0,5);
+	//quick_sort(array,0,5);
+	merge_sort(array, 0, 5);
 	cout<<"Sorted array:"<<endl;
 	for(int i = 0; i < 5;i++)
 	cout<<array[i]<<" ";
