@@ -10,6 +10,12 @@ void swap(int *array, int left, int right)
 }
 
 //buble sort
+/**
+* 冒泡排序的代码还可以优化一下：
+* 当序列本来就是有序的时候，复杂度降为O(n)而不是依然去做两轮循环，
+* 只需要在内层循环中添加一个标识位，当发现第一次遍历的时候并没有发生任何交换
+* 则直接完成排序，从而达到最好情况下O(n)的复杂度
+*/
 void buble_sort(int *array, int length)
 {
 	if(array == NULL)
@@ -90,6 +96,9 @@ void merge_sort(int *array, int left, int right)
 	//2:归并 
 	merge(array, left, right);
 }
+
+//堆排序
+void heap_sort()
 
 int main()
 {
