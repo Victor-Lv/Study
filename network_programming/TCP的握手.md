@@ -1,6 +1,8 @@
 ###TCP的握手主要有两个：建立连接时的三次握手、释放连接时的四次握手  
 首先理解下TCP协议中用到的几个关键字：  
-![](https://github.com/Victor-Lv/Study/blob/master/network_programming/image/tcp_connetct.png)  
+
+![](https://github.com/Victor-Lv/Study/blob/master/network_programming/image/tcp_keyword.png)  
+
 最常用的是SYN（发起连接时的同步序列号）、ACK（确认包的接收）、FIN（结束连接）、RST（重置连接、通知双方马上关闭连接）  
 ###一、建立TCP连接的三次握手：  
 示意图：  
