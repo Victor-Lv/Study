@@ -1,6 +1,7 @@
 [toc]
+
 # Git note
-## Git delete file
+### delete file
 
 > Use git rm:
 
@@ -12,4 +13,25 @@
 > And to push changes to remote repo
 > 
 >     git push origin branch_name  
+
+### add the change into cache
+#### add the file change only
+```git
+git add ./file.md
+```
+#### add the all change
+```git
+git add -A
+git add .
+git add --all
+```
+## add comment
+```git
+git commit -m "This is comment"
+```
+
+
+
+
+
 
