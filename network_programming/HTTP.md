@@ -1,6 +1,6 @@
 ##《Java Network Programming》学习笔记之HTTP篇：  ##
 *本文作者为吕浪（Victor Lv）,原出处为[Victor Lv's blog](http://langlv.me)([www.langlv.me](http://langlv.me))，转载请保留此句。*
-###一个HTTP-GET报文头部header示例：###
+### 一个HTTP-GET报文头部header示例：
 **我：client客户端**
 
 	GET /index.html HTTP/1.0  
@@ -19,7 +19,7 @@
 > " ……include a Host field specifying the server’s name, which allows web servers to distinguish between different named hosts served from the same IP address. "
 
 
-### 一个http响应示例： ###
+### 一个http响应示例:
 **我：server服务器**
 
 	HTTP/1.1 200 OK
@@ -60,22 +60,22 @@
 
 
 
-###连接的状态性：###
+### 连接的状态性
 > "If the client reconnects, the server retains no memory of the previous connection or its results. A protocol that retains no memory of past requests is called stateless; in contrast, a stateful protocol such as FTP can process many requests before the connection is closed. The lack of state is both a strength and a weakness of HTTP."
 
  **解析：**如果客户端和服务器断开连接后，服务器会清除所有跟先前连接相关的资源(包括内存、上下文信息等等)，那么这种情况叫"无状态"，反之，"有状态"的就是类似FTP协议,某一次断开连接之后仍会保留跟先前连接相关的资源，然后下一次恢复连接的时候，一方面能用到旧的资源，更快捷响应，另一方面因为保留了前面连接时的历史记录，这个的好处我估计：断点续传就是这个意思。HTTP协议的无连接性，一方面是它的优势所在，另一方面也是它的劣势所在，孰优孰劣看实际应用场景。
 
-####返回的状态码列表如下（摘自《Java Network Programming》：####
+#### 返回的状态码列表如下（摘自《Java Network Programming》：####
 ![](https://github.com/Victor-Lv/Study/blob/master/network_programming/image/HttpResponse-Status-1.PNG)
 ![](https://github.com/Victor-Lv/Study/blob/master/network_programming/image/HttpResponse-Status-2.PNG)
-####状态码各区间数值的意义：####
+#### 状态码各区间数值的意义:
 - 200~299：成功
 - 300~399:重定向
 - 400~499:来自客户端的错误
 - 500~599:来自服务器端的错误
 > HTTP 1.1 more than doubles the number of responses. However, a response code from 200 to 299 always indicates success, a response code from 300 to 399 always indicates redirection, one from 400 to 499 always indicates a client error, and one from 500 to 599 indicates a server error.
 
-###MIME：###
+### MIME：###
 > **MIME：**"Web servers use MIME to identify the kind of data they’re sending. Web clients use MIME to identify the kind of data they’re willing to accept. "
 
 部分MIME列表（摘自《Java Network Programming》：
