@@ -1,5 +1,5 @@
 ##《Java Network Programming》学习笔记之HTTP篇：  ##
-
+*本文作者为**吕浪（Victor Lv）**,原出处为**Victor Lv's blog**(**www.langlv.me**)，转载请保留此句。*
 ###一个HTTP-GET报文头部header示例：###
 **我：client客户端**
 

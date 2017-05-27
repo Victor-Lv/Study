@@ -1,7 +1,7 @@
 [toc]
 
 # 《HTTP权威指南》学习笔记之URI和URL
-*本文作者为**吕浪（Victor Lv）**,原出处为**Victor Lv's blog**: **www.langlv.me**，转载请注明。*
+*本文作者为**吕浪（Victor Lv）**,原出处为**Victor Lv's blog**(**www.langlv.me**)，转载请保留此句。*
 ### URI和URL：
 > URI：统一资源标识符Uniform Resource Identifier
 > URL：统一资源定位符Uniform / Universal Resource Locator   
