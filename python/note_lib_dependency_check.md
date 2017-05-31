@@ -117,7 +117,8 @@ popen2.*
 commands.*
 ```
 模块已经不被推荐使用了（虽然上面的程序我还是用了os.popen()）。
-subprocess使用方法：参见[subprocess — Subprocess management](https://docs.python.org/2/library/subprocess.html)或者[How to use subprocess popen Python?--stackoverflow](https://stackoverflow.com/questions/12605498/how-to-use-subprocess-popen-python)
+subprocess使用方法：参见[subprocess — Subprocess management](https://docs.python.org/2/library/subprocess.html)或者[How to use subprocess popen Python?--stackoverflow](https://stackoverflow.com/questions/12605498/how-to-use-subprocess-popen-python)  
+
 (1)subprocess.call() / subprocess.check_output():
 ```python
 #不需要读取stdout
