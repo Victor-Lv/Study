@@ -1,9 +1,9 @@
 [toc]
 
-# python notes of lib dependency checker #
+# python notes of lib dependency checker
 *本文作者为吕浪（Victor Lv）,原出处为[Victor Lv's blog](http://langlv.me)([www.langlv.me](http://langlv.me))，转载请保留此句。*  
 
-## 0.程序全文(based on python2.7)
+## 0.程序全文(based on python2.7 no python3)
 
 ```python
 
@@ -81,22 +81,62 @@ python --version / python -V
 ```
 不对，这只是我拿来查看print python版本的，实际上我是手动测试各种python版本，也就是这样`python2.7 -V`，这样`python3 -V`，这样`python2.5 -V`，逐个试试，如果没有报错，那个版本就是有的，最后被我发现服务器里面有python2.7版本的，所以搞定，只需要在执行python脚本时，使用`python2.7 file.py`指定用python2.7而不是默认的`python`运行程序即可。
 
+## 7. list, tuple, dict, set
+关于list,dict,set的选择问题，引用stackoverflow里面的一个回答：
+> Do you just need an ordered sequence of items? Go for a list.
+Do you just need to know whether or not you've already got a particular value, but without ordering (and you don't need to store duplicates)? Use a set.
+Do you need to associate values with keys, so you can look them up efficiently (by key) later on? Use a dictionary.  
 
+- - -
 
+> list:链表,有序的项目, 通过索引进行查找,使用方括号”[]”;
+tuple:元组,元组将多样的对象集合到一起,不能修改,通过索引进行查找, 使用括号”()”;
+dict:字典,字典是一组键(key)和值(value)的组合,通过键(key)进行查找,没有顺序, 使用大括号”{}”;
+set:集合,无序,元素只出现一次, 自动去重,使用”set([])”
 
+list链表是顺序存储的，查找需要给出索引，可以动态修改（增加、删除）。  
+tuple元组相当于“固定不变”的list。  
+set集合是无序的元素集合，注意是value集合并不是key-value的形式，一般只用来存储并判断元素是否存在的。  
+dict字典是key-value的形式，通过key来寻找value。
 
+用法可参考：[Python中list,tuple,dict,set的区别和用法](http://www.cnblogs.com/soaringEveryday/p/5044007.html)
 
+## 8. 使用函数减少重复性代码
+例如常见的程序输入参数检查，在这里我用了一个error_throw()函数提示输入参数错误并终止程序。errot_throw()函数和usage()函数可以合并为usage()函数
 
+## 9. 关于在何处import
+对于经常用到例如在多个函数里面都会用到的模块，如os,sys等，在程序开头imort进来，对于特定的模块或者说仅在一处地方使用到的模块，应在使用到时才import进来，这样一来，当程序没执行到此处就退出时，并不会import模块进来增加代码量或者导致可能的import异常（特别是import网络上的模块）。
 
+## 10. subprocess子进程模块	
+如果在python程序中希望执行cmd命令，需要用subprocess模块，除了subprocess模块，其他的诸如
+```python
+os.system
+os.spawn*
+os.popen*
+popen2.*
+commands.*
+```
+模块已经不被推荐使用了（虽然上面的程序我还是用了os.popen()）。
+subprocess使用方法：参见[subprocess — Subprocess management](https://docs.python.org/2/library/subprocess.html)或者[How to use subprocess popen Python?--stackoverflow](https://stackoverflow.com/questions/12605498/how-to-use-subprocess-popen-python)
+(1)subprocess.call() / subprocess.check_output():
+```python
+#不需要读取stdout
+subprocess.call(["ls", "-l"]) #逐一输入合并成list,自动添加空格
+subprocess.call("ls -l") #把整条命令读入不需要[]
 
+#如果需要读取子进程的stdout(标准输出)用check_output()
+import subprocess
 
+out = subprocess.check_output(['ls','-l'])
+print out
+```
+(2)subprocess.Popen():
+```python
+from subprocess import Popen, PIPE
 
-
-
-
-
-
-
+process = Popen(['swfdump', '/tmp/filename.swf', '-d'], stdout=PIPE, stderr=PIPE)
+stdout, stderr = process.communicate()
+```
 
 
 
