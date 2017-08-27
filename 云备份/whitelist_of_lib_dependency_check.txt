@@ -1,0 +1,3 @@
+#whitelist of lib dependency check: mamually write it in the format of: fromName -> toName
+
+unittest_infra_process infra_process
